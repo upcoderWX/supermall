@@ -1,0 +1,65 @@
+@import "./normalize.css";
+
+/*:root -> 获取根元素html*/
+/* 定义变量，使用：color: var(--color-text); */
+:root {
+  --color-text: #666;
+  --color-high-text: #ff5777;
+  --color-tint: #ff8198;    /* 背景颜色 */
+  --color-background: #fff;
+  --font-size: 14px;
+  --line-height: 1.5;
+}
+
+
+/* * 选择器选择所有元素
+* 选择器也可以选择另一个元素内的所有元素 */
+
+/* border-box：指定宽度和高度（最小/最大属性）确定元素边框。
+也就是说，对元素指定宽度和高度包括了 padding 和 border 。
+通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
+  -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+  background: var(--color-background);
+  color: var(--color-text);
+  /* rem vw/vh */
+  width: 100vw;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
