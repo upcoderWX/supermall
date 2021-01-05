@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     wx + ls
+    123
   </div>
 </template>
 
